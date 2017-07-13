@@ -10,10 +10,10 @@ to a differently designed file system
 				
 				
 3. badchars str: a string is specified as command line, check if the path contains each character
-						then print if the paths that have it
+		then print if the paths that have it
 						
 4. nocasesens: print any path in which the last component collides with another item in the same directory
-					   print all repeating paths with upper and lower case difference
+	       print all repeating paths with upper and lower case difference
 
 					   
 					   
