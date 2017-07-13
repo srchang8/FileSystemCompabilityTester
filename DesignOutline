@@ -1,0 +1,56 @@
+
+Planning
+
+Purpose of fsct: To find the paths that may cause incomparability issues when copying files from one file system
+to a differently designed file system
+
+
+
+
+1. maxdepth: print any paths that have more than specified number of components, 
+					by components i think they mean directories?
+
+2. pathmax: print any paths that have more than specified number of characters
+				e28/hw/hw1/tests/test1/data/orig/jun/12/wtmp.1 has more than 50 characters
+				
+3. badchars str: a string is specified as command line, check if the path contains each character
+						then print if the paths that have it
+						
+4. nocasesens: print any path in which the last component collides with another item in the same directory
+					   print all repeating paths with upper and lower case difference
+
+					   
+					   
+
+Design Outline
+For each directory, we first iterate through all entries and store their names in a list. Then, we
+iterate through this list of names, check whether they fit any of the compatibility criteria, and
+print them if they do. We need the list to check whether two or more file names differ only by
+case.
+Because there is no function in UNIX that tells us how many entries a directory has, we cannot
+create an array with the correct size, so we need to use a dynamic data structure. I chose a
+linked list. An alternative would be an array that is grown dynamically by calls to realloc(). To
+avoid dyamic data structures and use arrays instead, we could also first do an 'empty' iteration
+through the directory entries that simpy count the entries, then create an array of matching size,
+and finally iterate through the directory to fill the array, but that would require more file system
+accesses and may be inefficient.
+
+
+
+
+
+
+Check list
+use perror
+
+Error HandlingIf your program encounters an error while trying to open a directory 
+or read a directory, your program should print an error message to stderr and keep going. 
+For example, there may be an unreadable directory. Your program should print a message
+ using perror. Your program should not exit.
+
+Non-Directory Command Line Arguments Your program should accept command line arguments 
+that are not names of directories. This is not an error.
+
+Your program can detect illegal characters in a filename.
+
+

@@ -1,0 +1,42 @@
+README
+
+A) Summary of submission
+
+Submission contains 5 Files
+README
+fsct.c
+typescript
+Makefile
+Design Outline
+
+
+
+B) Description of two limitations of three file systems
+
+
+Operating System: Control Program/monitor(CP/M)
+File System Name: CP/M File System
+File System limitations:
+1. File names can have only up to 8 characters followed by a period followed by extension.
+2. Extension can only have up to 3 characters 
+3. Disk drive was identified by drive letter and to refer to it you would need 
+	a file name prefixed to it.
+4. No subdirectories in the file structure but provided 16 numbered user areas to keep files
+	organized
+
+Operating System: MS DOS
+File System Name: FAT
+File System Limitation
+1. A file or directory name can be no more than eight characters long.
+2. An extension can be no more than three characters long.
+3. No spaces can be included in the file name, the extension or the directory name.
+4. Certain characters (? * , ; = + #### >| [ ] / \) are illegal and cannot be used.
+
+Operating System: Digital Equipment Corporation OpenVMS
+File System Name: Files-11: ODS-2
+File System Limitations:
+1. Limited to 8 levels of subdirectories
+2. Only upper-case
+3. Alphanumeric names up to 39.39 characters.
+
+
