@@ -1,18 +1,4 @@
-README
-
-A) Summary of submission
-
-Submission contains 5 Files
-README
-fsct.c
-typescript
-Makefile
-Design Outline
-
-
-
-B) Description of two limitations of three file systems
-
+Description of two limitations of three file systems
 
 Operating System: Control Program/monitor(CP/M)
 File System Name: CP/M File System
