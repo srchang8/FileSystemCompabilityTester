@@ -1,4 +1,5 @@
-Purpose of fsct: To find the paths that may cause incomparability issues when copying files from one file system
+Purpose of fsct: 
+To find the paths that may cause incomparability issues when copying files from one file system
 to a differently designed file system
 
 
